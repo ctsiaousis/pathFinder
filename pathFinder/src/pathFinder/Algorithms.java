@@ -5,7 +5,7 @@ import java.util.*;
 public class Algorithms {
 	private Setup setup;
 	private int nodesVisited;
-	private double predictedCost, realCost;
+	private double predictedCost, realCost, roadCost;
 	private long executionTime;
 	private ArrayList<String> path;
 	private String currentAlgo;
@@ -17,6 +17,7 @@ public class Algorithms {
 		this.path = new ArrayList<String>();
 		this.realCost = 0;
 		this.predictedCost = 0;
+		this.roadCost = 0;
 		for(Node n : this.setup.network) 
 			n.resetCurrentCost();
 	}
@@ -36,6 +37,14 @@ public class Algorithms {
 			this.predictedCost += (tmpRoad.weight)*d.getTraffic(d.findRoadIndex(tmpRoad));
 		}
 	}	
+	
+	private double printWeightForEachRoad(Day d , int i) {
+		this.roadCost = 0;
+			Road tmpRoad = this.setup.findConnectorRoad(this.path.get(i - 1), this.path.get(i));
+			this.roadCost = (tmpRoad.weight)*d.getTraffic(d.findRoadIndex(tmpRoad));
+		
+		return this.roadCost;
+	}
 	
 	private void calculatePath(int[] parentNodes) {
 		int src = this.setup.network.indexOf(this.setup.findNodeByName(this.setup.source));
@@ -239,8 +248,20 @@ public class Algorithms {
 		for (int i = path.size()-1; i >= 0; i--) {
 			System.out.printf(this.path.get(i) + (i == 0 ? "\n" : " -> "));
 		}
-		System.out.println("Predicted Cost: " + this.predictedCost);
-		System.out.println("Real Cost: " + this.realCost);
+		System.out.println("Prediction Cost for each road: ");
+		for (int i = path.size()-1; i > 0; i--) {
+			String name = this.setup.findConnectorRoad(this.path.get(i - 1), this.path.get(i)).roadName;
+			double	roadCost=this.printWeightForEachRoad(d1, i);
+			System.out.printf(name + " cost: " + roadCost + "\t");
+		}
+		System.out.println("\nActual Cost for each road: ");
+		for (int i = path.size()-1; i > 0; i--) {
+			String name = this.setup.findConnectorRoad(this.path.get(i - 1), this.path.get(i)).roadName;
+			double	roadCost=this.printWeightForEachRoad(d2, i);
+			System.out.printf(name + " cost: " + roadCost + "\t");
+		}
+		System.out.println("\nTotal Predicted Cost: " + this.predictedCost);
+		System.out.println("Total Real Cost: " + this.realCost);
 		System.out.println("--------------------------------------");
 	}
 
