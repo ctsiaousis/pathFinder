@@ -7,6 +7,7 @@ public class Day {
 	
 	public List<String> roadNames;
 	public List<Double> traffic;
+	public boolean isPrediction;
 	public double normalTrafficVal;
 		
 	public Day() {
@@ -14,8 +15,14 @@ public class Day {
 		normalTrafficVal = 1;
 		roadNames = new ArrayList<String>();
 		traffic = new ArrayList<Double>();
+		this.isPrediction = false;
 	}
-	
+	public void setIsPrediction(boolean b) {
+		this.isPrediction = b;
+	}
+	public boolean getIsPrediction() {
+		return this.isPrediction;
+	}
 	public int findRoadIndex(Road r) {
 		String name = r.roadName;
 		for (int i = 0; i < roadNames.size(); i++) {

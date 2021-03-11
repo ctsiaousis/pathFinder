@@ -140,9 +140,11 @@ public class FileParser {
 //		        System.out.println(data);
 		        if(endingSymbol == 5) {
 		        	if(outterSection == 4) {
+		        		tmpDay.setIsPrediction(true);
 		        		mySetup.addPredictionDay(tmpDay);
 //		        		System.out.println("Mera Pred");
 		        	}else if(outterSection == 6) {
+		        		tmpDay.setIsPrediction(false);
 		        		mySetup.addActualTrafficDay(tmpDay);
 //		        		System.out.println("Mera Actual");
 		        	}else {

@@ -27,9 +27,9 @@ public class Main {
 			for(int i=0 ; i<inputData.actualTraffic.size(); i++) {
 				System.out.println("---------------Day " +i+ "-----------------");
 				alg.runUCS(inputData.getPredictionDay(i));
-				alg.printResults(inputData.getPredictionDay(i),inputData.getActualTrafficDay(i));
+				alg.printResults(inputData.getPredictionDay(i));
 				alg.runUCS(inputData.getActualTrafficDay(i));
-				alg.printResults(inputData.getPredictionDay(i),inputData.getActualTrafficDay(i));
+				alg.printResults(inputData.getActualTrafficDay(i));
 
 //				alg.runBFS();
 //				alg.printResults(inputData.getPredictionDay(i),inputData.getActualTrafficDay(i));
