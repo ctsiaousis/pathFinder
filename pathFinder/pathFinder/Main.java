@@ -26,14 +26,15 @@ public class Main {
 //			System.out.println(inputData.getActualTrafficDay(20).traffic);
 			for(int i=0 ; i<inputData.actualTraffic.size(); i++) {
 				System.out.println("---------------Day " +i+ "-----------------");
-				alg.runAStar(inputData.getPredictionDay(i));
+				alg.runIDAStar(inputData.getPredictionDay(i));
 				alg.printResults(inputData.getPredictionDay(i));
-				alg.runAStar(inputData.getActualTrafficDay(i));
+				alg.runIDAStar(inputData.getActualTrafficDay(i));
 				alg.printResults(inputData.getActualTrafficDay(i));
-
 //				alg.runBFS();
 //				alg.printResults(inputData.getPredictionDay(i),inputData.getActualTrafficDay(i));
 			}
+			double cost=alg.printMeanCost()/80;
+			System.out.println("The total mean cost is: "+cost);
 			
 		} else {
 			System.err.println("Parse check failed");

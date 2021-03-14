@@ -4,9 +4,10 @@ import java.util.*;
 import java.lang.Math;
 
 public class Algorithms {
+	private static final int FOUND = -3;
 	private Setup setup;
 	private int nodesVisited;
-	private double predictedCost, realCost, roadCost;
+	private double predictedCost, realCost, roadCost, totalCost;
 	private long executionTime;
 	private ArrayList<String> path;
 	private String currentAlgo;
@@ -25,7 +26,7 @@ public class Algorithms {
 			// varos = proigoumena*(1-a)+a*curWeight
 			double var = this.a * curWeight + (1 - this.a) * this.calcWeigthMean();
 			this.prevWeights.add(curWeight);// We add real data not estimations
-			System.out.println("I GOT " + curWeight + " But I Say: " + var);
+//			System.out.println("I GOT " + curWeight + " But I Say: " + var);
 			if (var > curWeight)
 				var = curWeight;
 			return var;
@@ -259,9 +260,89 @@ public class Algorithms {
 
 	}
 
+	public double searchIDA(List<Node> mPath, Day dayIn, double fringeCost, Heuristic h) {
+		this.nodesVisited++;
+		Node dstNode = this.setup.findNodeByName(this.setup.destination);
+		Node currNode = mPath.get(mPath.size() - 1);
+//		Road connector=this.setup.findConnectorRoad(currNode.name, mPath.get(mPath.size()).name);
+//		double startCost = currNode.calculateCost(dayIn, connector);
+//		double startingGCost = currNode.currentCost + startCost;
+//		currNode.currentCost = startingGCost;
+//		currNode.fringeCost = currNode.currentCost + h.calcStep(currNode.currentCost);
+		if (currNode.fringeCost > fringeCost)
+			return currNode.fringeCost;
+		if (currNode.name.equals(dstNode.name))
+			return FOUND;
+		double minimum = Double.POSITIVE_INFINITY;
+		for (Road road : currNode.roads) {
+			Node childNode;
+			if (road.dstNode == currNode)
+				childNode = road.srcNode;
+			else
+				childNode = road.dstNode;
+			
+			if (!mPath.contains(childNode)) {
+				double cost = currNode.calculateCost(dayIn, road);
+				double tentativeCost = currNode.currentCost + cost;
+				childNode.currentCost = tentativeCost;
+				childNode.fringeCost = tentativeCost - h.calcStep(currNode.currentCost);
+				mPath.add(childNode);
+				double t = searchIDA(mPath, dayIn, fringeCost, h);
+				if (t == FOUND)
+					return FOUND;
+				if (t < minimum)
+					minimum = t;
+				mPath.remove(childNode);
+			}
+		}
+		return minimum;
+	}
+
+	public void runIDAStar(Day dayIn) {
+		reset();
+		this.currentAlgo = "IDA*";
+		long tic = System.nanoTime();
+		Node srcNode = this.setup.findNodeByName(this.setup.source);
+		int networkSize = this.setup.network.size();
+
+		List<Node> queue = new ArrayList<Node>(networkSize);
+		queue.add(srcNode);
+
+		Heuristic h = new Heuristic();
+		srcNode.currentCost = 0;
+		srcNode.fringeCost = h.calcStep(0);
+		double fringe = 2000;
+		
+		boolean found = false;
+		while (true) {
+			reset();
+			srcNode.currentCost = 0;
+			srcNode.fringeCost = h.calcStep(0);
+			double cost = this.searchIDA(queue, dayIn, fringe, h);
+			if (cost == FOUND) {
+				found = true;
+				break;
+			}
+			if (cost == Double.POSITIVE_INFINITY)
+				break;
+			fringe = cost;
+		}
+		if (found) {
+			System.out.println("EVRHKA");
+			for(Node n: queue) {
+				this.path.add(n.name);
+			}
+//			this.calculatePath(parentNode);
+//			this.realCost = current.currentCost;
+			long toc = System.nanoTime();
+			this.executionTime = toc - tic;
+			return;
+		}
+	}
+
 	public void runAStar(Day dayIn) {
 		reset();
-		this.currentAlgo = "UCS";
+		this.currentAlgo = "A*";
 		long tic = System.nanoTime();
 		Node srcNode = this.setup.findNodeByName(this.setup.source);
 		Node dstNode = this.setup.findNodeByName(this.setup.destination);
@@ -271,14 +352,15 @@ public class Algorithms {
 		PriorityQueue<Node> queue = new PriorityQueue<Node>(networkSize, srcNode.new SortbyFringe());
 		queue.add(srcNode);
 		boolean visited[] = new boolean[networkSize];
-		
+
 		for (int i = 0; i < networkSize; i++) {
 			visited[i] = false;
 			parentNode[i] = -1;
 		}
+
 		Heuristic h = new Heuristic();
 		srcNode.currentCost = 0;
-		srcNode.fringeCost  = h.calcStep(1);
+		srcNode.fringeCost = h.calcStep(1);
 
 		while (!queue.isEmpty()) {
 			Node currNode = queue.poll();
@@ -295,23 +377,23 @@ public class Algorithms {
 				return;
 			}
 
-			testLabel:
+//			testLabel: 
 			for (Road r : currNode.roads) {
 				Node childNode;
-				if(r.dstNode == currNode)
+				if (r.dstNode == currNode)
 					childNode = r.srcNode;
 				else
 					childNode = r.dstNode;
-				
+
 				double cost = childNode.calculateCost(dayIn, r);
 				double tentativeCost = currNode.currentCost + cost;
-				
-				if(tentativeCost<currNode.currentCost) {
+
+				if (tentativeCost < currNode.currentCost) {
 					parentNode[setup.network.indexOf(childNode)] = setup.network.indexOf(currNode);
 					childNode.currentCost = tentativeCost;
 					childNode.fringeCost = childNode.currentCost + h.calcStep(childNode.currentCost);
-					
-					if(!queue.contains(childNode))
+
+					if (!queue.contains(childNode))
 						queue.add(childNode);
 				}
 
@@ -320,8 +402,20 @@ public class Algorithms {
 		}
 	}
 
+	public double printMeanCost() {
+		for (int i = 0; i < this.setup.actualTraffic.size(); i++) {
+			calcRealCostFromPath(this.setup.getActualTrafficDay(i));
+			totalCost += this.realCost;
+		}
+		return totalCost;
+	}
+
 	public void printResults(Day d1) {
-		calcPredictedCostFromPath(d1);
+		if (d1.isPrediction) {
+			calcPredictedCostFromPath(d1);
+		} else {
+			calcRealCostFromPath(d1);
+		}
 		System.out.println("------------" + currentAlgo + " Results: -------------");
 		System.out.println("Execution Time: " + this.executionTime + " ns");
 		System.out.println("Visited Nodes number: " + this.nodesVisited);
@@ -345,15 +439,18 @@ public class Algorithms {
 				System.out.printf(name + " cost: " + roadCost + "\t");
 			}
 		}
+
 		System.out.println("\nTotal Predicted Cost: " + this.predictedCost);
 		System.out.println("Total Real Cost: " + this.realCost);
 		System.out.println("--------------------------------------");
+
 	}
 
 	public Algorithms(Setup setup) {
 		this.setup = setup;
 		predictedCost = 0;
 		realCost = 0;
+		totalCost = 0;
 		executionTime = 0;
 		nodesVisited = 0;
 		this.path = new ArrayList<String>();
