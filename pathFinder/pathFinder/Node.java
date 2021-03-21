@@ -43,6 +43,9 @@ public class Node {
 		this.currentCost=r.weight;
 		return this.currentCost;
 	}	
+	public double getCurrentCost() {
+		return currentCost;
+	}
 	public double calculateCost(Day d, Road r) {
 		this.currentCost=d.calculateWeight(r);
 		return this.currentCost;

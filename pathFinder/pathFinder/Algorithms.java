@@ -3,6 +3,7 @@ package pathFinder;
 import java.util.*;
 import java.lang.Math;
 
+
 public class Algorithms {
 	private static final int FOUND = -3;
 	private Setup setup;
@@ -11,37 +12,9 @@ public class Algorithms {
 	private long executionTime;
 	private ArrayList<String> path;
 	private String currentAlgo;
-
-	class Heuristic {
-		int arbitrary = 100; // A random initial weight
-		private ArrayList<Double> prevWeights;
-		private double a = 0.15;
-
-		public Heuristic() {
-			this.prevWeights = new ArrayList<Double>();
-			this.prevWeights.add((double) this.arbitrary);
-		}
-
-		public double calcStep(double curWeight) {
-			// varos = proigoumena*(1-a)+a*curWeight
-			double var = this.a * curWeight + (1 - this.a) * this.calcWeigthMean();
-			this.prevWeights.add(curWeight);// We add real data not estimations
-//			System.out.println("I GOT " + curWeight + " But I Say: " + var);
-			if (var > curWeight)
-				var = curWeight;
-			return var;
-		}
-
-		public double calcWeigthMean() {
-			double mean = 0;
-			for (double d : this.prevWeights) {
-				mean += d;
-			}
-			mean = mean / this.prevWeights.size();
-			return Math.floor(mean);
-		}
-	}
-
+	
+	
+	
 	private void reset() {
 		this.currentAlgo = "";
 		this.executionTime = 0;
@@ -69,7 +42,7 @@ public class Algorithms {
 			this.predictedCost += (tmpRoad.weight) * d.getTraffic(d.findRoadIndex(tmpRoad));
 		}
 	}
-
+	
 	private double printWeightForEachRoad(Day d, int i) {
 		this.roadCost = 0;
 		Road tmpRoad = this.setup.findConnectorRoad(this.path.get(i - 1), this.path.get(i));
@@ -91,7 +64,6 @@ public class Algorithms {
 		}
 
 	}
-
 	public void runBFS() {
 		reset();
 		this.currentAlgo = "BFS";
@@ -142,65 +114,8 @@ public class Algorithms {
 		this.executionTime = toc - tic;
 	}
 
-//	public void runUCS() {
-//		reset();
-//		this.currentAlgo = "UCS";
-//		long tic = System.nanoTime();
-//		Node srcNode = this.setup.findNodeByName(this.setup.source);
-//		Node dstNode = this.setup.findNodeByName(this.setup.destination);
-//		int networkSize = this.setup.network.size();
-//		int parentNode[] = new int[networkSize];
-//		
-//		
-//		PriorityQueue<Node> queue = new PriorityQueue<Node>(networkSize,srcNode.new SortbyWeight());
-//		
-//		srcNode.currentCost=0;
-//        queue.add(srcNode);
-//		boolean visited[] = new boolean[networkSize];
-//		
-//		for (int i = 0; i < networkSize; i++) {
-//			visited[i] = false;
-//			parentNode[i] = -1;
-//		}
-//		
-//		while(!queue.isEmpty()) {
-//			Node current = queue.poll();
-//			int index = this.setup.network.indexOf(current);
-//			visited[index]=true;
-//			this.nodesVisited++;
-//			
-//			if(current.name.equals(dstNode.name)) {
-//				System.out.println("EVRHKA");
-////				parentNode[index] = this.setup.network.indexOf(srcNode);
-//				this.calculatePath(parentNode);
-////				this.realCost = current.currentCost;
-//				long toc = System.nanoTime();
-//				this.executionTime = toc - tic;
-//				return;
-//			}
-//			for(Road r : current.roads) {
-//				Node child;
-//				if(r.dstNode == current) {
-//					child = r.srcNode;
-//				}else {
-//					child = r.dstNode;
-//				}
-//				index =  this.setup.network.indexOf(child);
-//				
-//				if(!visited[index] && !queue.contains(child)) {
-//					double cost = child.calculateCost(r);
-//					child.currentCost = current.currentCost + cost;
-//					parentNode[setup.network.indexOf(child)]=this.setup.network.indexOf(current);
-//					queue.add(child);
-//				}
-//				else if((queue.contains(child)) && (child.currentCost<current.currentCost)){
-//					parentNode[setup.network.indexOf(child)]=this.setup.network.indexOf(current);
-//					current=child;
-//				}
-//			}
-//		}
-//        
-//	}
+	
+
 	public void runUCS(Day dd) {
 		reset();
 //		System.out.println(setup.actualTraffic);
@@ -260,15 +175,10 @@ public class Algorithms {
 
 	}
 
-	public double searchIDA(List<Node> mPath, Day dayIn, double fringeCost, Heuristic h) {
+	public double searchIDA(List<Node> mPath, Day dayIn, double fringeCost, Heuristic2 h) {
 		this.nodesVisited++;
 		Node dstNode = this.setup.findNodeByName(this.setup.destination);
 		Node currNode = mPath.get(mPath.size() - 1);
-//		Road connector=this.setup.findConnectorRoad(currNode.name, mPath.get(mPath.size()).name);
-//		double startCost = currNode.calculateCost(dayIn, connector);
-//		double startingGCost = currNode.currentCost + startCost;
-//		currNode.currentCost = startingGCost;
-//		currNode.fringeCost = currNode.currentCost + h.calcStep(currNode.currentCost);
 		if (currNode.fringeCost > fringeCost)
 			return currNode.fringeCost;
 		if (currNode.name.equals(dstNode.name))
@@ -285,7 +195,7 @@ public class Algorithms {
 				double cost = currNode.calculateCost(dayIn, road);
 				double tentativeCost = currNode.currentCost + cost;
 				childNode.currentCost = tentativeCost;
-				childNode.fringeCost = tentativeCost - h.calcStep(currNode.currentCost);
+				childNode.fringeCost = tentativeCost + h.giveTheWeight(childNode,dayIn);
 				mPath.add(childNode);
 				double t = searchIDA(mPath, dayIn, fringeCost, h);
 				if (t == FOUND)
@@ -303,28 +213,37 @@ public class Algorithms {
 		this.currentAlgo = "IDA*";
 		long tic = System.nanoTime();
 		Node srcNode = this.setup.findNodeByName(this.setup.source);
+
+////		h2.calcStep2(srcNode,dayIn);
 		int networkSize = this.setup.network.size();
 
 		List<Node> queue = new ArrayList<Node>(networkSize);
 		queue.add(srcNode);
 
-		Heuristic h = new Heuristic();
+		Heuristic2 h = new Heuristic2(this.setup, dayIn);
 		srcNode.currentCost = 0;
-		srcNode.fringeCost = h.calcStep(0);
-		double fringe = 2000;
+		srcNode.fringeCost = h.giveTheWeight(srcNode,dayIn);
+//		System.out.println("---------------------------------------------"+srcNode.fringeCost);
+		double fringe = srcNode.fringeCost;
+		System.out.println(fringe);
+////		double fringe1 = 2000;
 		
 		boolean found = false;
 		while (true) {
-			reset();
-			srcNode.currentCost = 0;
-			srcNode.fringeCost = h.calcStep(0);
+//			reset();
+//			srcNode.currentCost = 0;
+//			srcNode.fringeCost = h.calcStep2(srcNode,dayIn);
 			double cost = this.searchIDA(queue, dayIn, fringe, h);
+//			reset();
 			if (cost == FOUND) {
+				System.out.println('1');
 				found = true;
 				break;
 			}
-			if (cost == Double.POSITIVE_INFINITY)
+			if (cost == Double.POSITIVE_INFINITY) {
+				System.out.println('2');
 				break;
+			}
 			fringe = cost;
 		}
 		if (found) {
@@ -332,75 +251,14 @@ public class Algorithms {
 			for(Node n: queue) {
 				this.path.add(n.name);
 			}
-//			this.calculatePath(parentNode);
-//			this.realCost = current.currentCost;
+////			this.calculatePath(parentNode);
+////			this.realCost = current.currentCost;
 			long toc = System.nanoTime();
 			this.executionTime = toc - tic;
 			return;
 		}
 	}
-
-	public void runAStar(Day dayIn) {
-		reset();
-		this.currentAlgo = "A*";
-		long tic = System.nanoTime();
-		Node srcNode = this.setup.findNodeByName(this.setup.source);
-		Node dstNode = this.setup.findNodeByName(this.setup.destination);
-		int srcIndex = this.setup.network.indexOf(srcNode);
-		int networkSize = this.setup.network.size();
-		int parentNode[] = new int[networkSize];
-		PriorityQueue<Node> queue = new PriorityQueue<Node>(networkSize, srcNode.new SortbyFringe());
-		queue.add(srcNode);
-		boolean visited[] = new boolean[networkSize];
-
-		for (int i = 0; i < networkSize; i++) {
-			visited[i] = false;
-			parentNode[i] = -1;
-		}
-
-		Heuristic h = new Heuristic();
-		srcNode.currentCost = 0;
-		srcNode.fringeCost = h.calcStep(1);
-
-		while (!queue.isEmpty()) {
-			Node currNode = queue.poll();
-			int index = this.setup.network.indexOf(currNode);
-			visited[index] = true;
-			this.nodesVisited++;
-
-			if (currNode.name.equals(dstNode.name)) {
-				System.out.println("EVRHKA");
-				this.calculatePath(parentNode);
-//				this.realCost = current.currentCost;
-				long toc = System.nanoTime();
-				this.executionTime = toc - tic;
-				return;
-			}
-
-//			testLabel: 
-			for (Road r : currNode.roads) {
-				Node childNode;
-				if (r.dstNode == currNode)
-					childNode = r.srcNode;
-				else
-					childNode = r.dstNode;
-
-				double cost = childNode.calculateCost(dayIn, r);
-				double tentativeCost = currNode.currentCost + cost;
-
-				if (tentativeCost < currNode.currentCost) {
-					parentNode[setup.network.indexOf(childNode)] = setup.network.indexOf(currNode);
-					childNode.currentCost = tentativeCost;
-					childNode.fringeCost = childNode.currentCost + h.calcStep(childNode.currentCost);
-
-					if (!queue.contains(childNode))
-						queue.add(childNode);
-				}
-
-			}
-
-		}
-	}
+	
 
 	public double printMeanCost() {
 		for (int i = 0; i < this.setup.actualTraffic.size(); i++) {

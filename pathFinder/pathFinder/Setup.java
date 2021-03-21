@@ -71,7 +71,8 @@ public class Setup {
 //			System.out.println("findConnectorRoad::"+r.roadName+", "+r.srcNode.name+", "+r.dstNode.name);
 			if(r.sourceNodeName.equals(n1) && r.destNodeName.equals(n2)) {
 				return r;
-			}else if(r.sourceNodeName.equals(n2) && r.destNodeName.equals(n1)) {
+			}
+			if(r.sourceNodeName.equals(n2) && r.destNodeName.equals(n1)) {
 				return r;
 			}
 		}
