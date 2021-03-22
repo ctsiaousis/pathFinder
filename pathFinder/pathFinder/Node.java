@@ -6,22 +6,26 @@ public class Node {
 	public LinkedList<Node> connections;
 	public LinkedList<Road> roads;
 	public double currentCost;
+	public double fringeCost;
 	
 	
 	public Node() {
 		connections = new LinkedList<Node>();
 		roads = new LinkedList<Road>();
 		this.currentCost=Double.POSITIVE_INFINITY;
+		this.fringeCost= Double.POSITIVE_INFINITY;
 	}
 	public Node(String nam) {
 		name = nam;
 		connections = new LinkedList<Node>();
 		roads = new LinkedList<Road>();
 		this.currentCost=Double.POSITIVE_INFINITY;
+		this.fringeCost= Double.POSITIVE_INFINITY;
 	}
 	
 	public void resetCurrentCost() {
 		this.currentCost=Double.POSITIVE_INFINITY;
+		this.fringeCost= Double.POSITIVE_INFINITY;
 	}
 	
 	public Node findNodeByName(String name) {
@@ -39,6 +43,9 @@ public class Node {
 		this.currentCost=r.weight;
 		return this.currentCost;
 	}	
+	public double getCurrentCost() {
+		return currentCost;
+	}
 	public double calculateCost(Day d, Road r) {
 		this.currentCost=d.calculateWeight(r);
 		return this.currentCost;
@@ -63,6 +70,21 @@ public class Node {
 	        if(i.currentCost > j.currentCost){
 	            return 1;
 	        }else if (i.currentCost < j.currentCost){
+	            return -1;
+	        }else{
+	            return 0;
+	        }
+	    }
+	}
+	class SortbyFringe implements Comparator<Node>
+	{
+	    // Used for sorting in ascending order of
+	    // name
+	    public int compare(Node i, Node j)
+	    {
+	        if(i.fringeCost > j.fringeCost){
+	            return 1;
+	        }else if (i.fringeCost < j.fringeCost){
 	            return -1;
 	        }else{
 	            return 0;
