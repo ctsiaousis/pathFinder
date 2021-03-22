@@ -237,12 +237,12 @@ public class Algorithms {
 			double cost = this.searchIDA(queue, dayIn, fringe, h);
 //			reset();
 			if (cost == FOUND) {
-				System.out.println('1');
+//				System.out.println('1');
 				found = true;
 				break;
 			}
 			if (cost == Double.POSITIVE_INFINITY) {
-				System.out.println('2');
+//				System.out.println('2');
 				break;
 			}
 			fringe = cost;
@@ -252,6 +252,7 @@ public class Algorithms {
 			for(Node n: queue) {
 				this.path.add(n.name);
 			}
+			this.path=pathUpsideDown(this.path);
 ////			this.calculatePath(parentNode);
 ////			this.realCost = current.currentCost;
 			long toc = System.nanoTime();
@@ -260,6 +261,13 @@ public class Algorithms {
 		}
 	}
 	
+	public ArrayList<String> pathUpsideDown(ArrayList<String> prevPath){
+		ArrayList<String> newPath = new ArrayList<String>();
+		for(int i=prevPath.size()-1;i>=0;i--) {
+			newPath.add(prevPath.get(i));
+		}
+		return newPath;
+	} 
 
 	public double printMeanCost() {
 		for (int i = 0; i < this.setup.actualTraffic.size(); i++) {

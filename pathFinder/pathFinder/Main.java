@@ -28,6 +28,11 @@ public class Main {
 				alg.runIDAStar(inputData.getActualTrafficDay(i));
 				alg.printResults(inputData.getActualTrafficDay(i));
 //////				
+				
+//				alg.runUCS(inputData.getPredictionDay(i));
+//				alg.printResults(inputData.getPredictionDay(i));
+//				alg.runUCS(inputData.getActualTrafficDay(i));
+//				alg.printResults(inputData.getActualTrafficDay(i));
 //				alg.runDijkstra(inputData.getPredictionDay(i));
 //				alg.printResults(inputData.getPredictionDay(i));
 //				alg.runDijkstra(inputData.getActualTrafficDay(i));
