@@ -192,7 +192,8 @@ public class Algorithms {
 				childNode = road.dstNode;
 			
 			if (!mPath.contains(childNode)) {
-				double cost = currNode.calculateCost(dayIn, road);
+//				double cost = currNode.calculateCost(dayIn, road);
+				double cost = dayIn.calculateWeight(road);
 				double tentativeCost = currNode.currentCost + cost;
 				childNode.currentCost = tentativeCost;
 				childNode.fringeCost = tentativeCost + h.giveTheWeight(childNode,dayIn);
@@ -225,7 +226,7 @@ public class Algorithms {
 		srcNode.fringeCost = h.giveTheWeight(srcNode,dayIn);
 //		System.out.println("---------------------------------------------"+srcNode.fringeCost);
 		double fringe = srcNode.fringeCost;
-		System.out.println(fringe);
+//		System.out.println(fringe);
 ////		double fringe1 = 2000;
 		
 		boolean found = false;
