@@ -1,10 +1,12 @@
 package pathFinder;
 
 import utils.FileParser;
+import java.io.*;
 
 public class Main {
+	public final static String outfile = "out.txt";
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		FileParser mParser = new FileParser();
 		Setup inputData = new Setup();
 		mParser.parse("sampleGraph3.txt", inputData);
@@ -14,11 +16,10 @@ public class Main {
 //		System.out.println(inputData.actualTraffic.size());
 //		System.out.println(inputData.findRoadByName("ErgotelisAve").destNodeName);
 		if (inputData.validateData()) {
-			System.out.println("Valid Parse, continue");
-//			System.out.println(inputData.network.size());
-//			System.out.println(inputData.findConnectorRoad("10Node1e","10Node2e").roadName);
+			System.out.println("Valid Parse, outputing to \"" + outfile + "\"");
+			PrintStream o = new PrintStream(new File(outfile));
+			System.setOut(o); // System.out now outputs to the file out.txt
 			Algorithms alg = new Algorithms(inputData);
-//			System.out.println(inputData.getActualTrafficDay(20).traffic);
 			for (int i = 0; i < inputData.actualTraffic.size(); i++) {
 				System.out.println("---------------Day " + i + "-----------------");
 				alg.runIDAStar(inputData.getPredictionDay(i));

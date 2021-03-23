@@ -215,18 +215,14 @@ public class Algorithms {
 		while (true) {
 			double cost = this.searchIDA(queue, dayIn, fringe, h);
 			if (cost == FOUND) {
-//				System.out.println('1');
 				found = true;
 				break;
 			}
-			if (cost == Double.POSITIVE_INFINITY) {
-//				System.out.println('2');
+			if (cost == Double.POSITIVE_INFINITY)
 				break;
-			}
 			fringe = cost;
 		}
 		if (found) {
-//			System.out.println("EVRHKA");
 			for (Node n : queue) {
 				this.path.add(n.name);
 			}

@@ -1,0 +1,1681 @@
+---------------Day 0-----------------
+------------IDA* Results: -------------
+Execution Time: 34519954 ns
+Visited Nodes number: 578
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 10Node2e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road7e cost: 7.2	Road24e cost: 45.0	Road23e cost: 5.0	Road144e cost: 44.1	Road101e cost: 17.1	
+Total Predicted Cost: 157.4
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 76517173 ns
+Visited Nodes number: 11258
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road36e cost: 29.7	Road144e cost: 44.1	Road101e cost: 23.75	
+Total Predicted Cost: 0.0
+Total Real Cost: 97.55
+--------------------------------------
+---------------Day 1-----------------
+------------IDA* Results: -------------
+Execution Time: 7586587 ns
+Visited Nodes number: 1218
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 48.75	Road7e cost: 10.0	Road145e cost: 33.75	Road86e cost: 9.9	Road89e cost: 35.0	
+Total Predicted Cost: 137.4
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 3580082 ns
+Visited Nodes number: 589
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node8e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 21.0	Road19e cost: 7.0	Road47e cost: 9.9	Road145e cost: 27.0	Road93e cost: 21.0	Road101e cost: 19.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 140.0
+--------------------------------------
+---------------Day 2-----------------
+------------IDA* Results: -------------
+Execution Time: 110943493 ns
+Visited Nodes number: 15459
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 29.7	Road144e cost: 49.0	Road101e cost: 19.0	
+Total Predicted Cost: 97.7
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 5897865 ns
+Visited Nodes number: 678
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 18.900000000000002	Road17e cost: 15.0	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 28.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 132.3
+--------------------------------------
+---------------Day 3-----------------
+------------IDA* Results: -------------
+Execution Time: 39311200 ns
+Visited Nodes number: 3863
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road7e cost: 8.0	Road145e cost: 33.75	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 116.95
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 9180192 ns
+Visited Nodes number: 2737
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road7e cost: 10.0	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 108.30000000000001
+--------------------------------------
+---------------Day 4-----------------
+------------IDA* Results: -------------
+Execution Time: 6126230 ns
+Visited Nodes number: 2681
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road7e cost: 8.0	Road145e cost: 24.3	Road93e cost: 21.0	Road101e cost: 19.0	
+Total Predicted Cost: 111.3
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 5847541 ns
+Visited Nodes number: 1309
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 48.75	Road7e cost: 7.2	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 28.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 119.25
+--------------------------------------
+---------------Day 5-----------------
+------------IDA* Results: -------------
+Execution Time: 40662835 ns
+Visited Nodes number: 27617
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 44.1	Road101e cost: 17.1	
+Total Predicted Cost: 94.2
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 61622398 ns
+Visited Nodes number: 41124
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road36e cost: 41.25	Road144e cost: 44.1	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 102.45
+--------------------------------------
+---------------Day 6-----------------
+------------IDA* Results: -------------
+Execution Time: 16335507 ns
+Visited Nodes number: 11881
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 29.7	Road144e cost: 49.0	Road101e cost: 17.1	
+Total Predicted Cost: 95.8
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 15956962 ns
+Visited Nodes number: 9831
+Path: 
+10Node4e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road37e cost: 32.4	Road145e cost: 33.75	Road93e cost: 18.900000000000002	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 102.15
+--------------------------------------
+---------------Day 7-----------------
+------------IDA* Results: -------------
+Execution Time: 5394098 ns
+Visited Nodes number: 2701
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 48.75	Road7e cost: 8.0	Road145e cost: 33.75	Road86e cost: 13.75	Road89e cost: 35.0	
+Total Predicted Cost: 139.25
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 24297384 ns
+Visited Nodes number: 15489
+Path: 
+10Node4e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road13e cost: 57.6	Road17e cost: 18.75	Road145e cost: 33.75	Road86e cost: 13.75	Road89e cost: 35.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 158.85
+--------------------------------------
+---------------Day 8-----------------
+------------IDA* Results: -------------
+Execution Time: 7785026 ns
+Visited Nodes number: 5870
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 35.1	Road7e cost: 8.0	Road145e cost: 33.75	Road86e cost: 11.0	Road89e cost: 28.0	
+Total Predicted Cost: 115.85
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 38060674 ns
+Visited Nodes number: 25371
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 44.1	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 94.2
+--------------------------------------
+---------------Day 9-----------------
+------------IDA* Results: -------------
+Execution Time: 12028403 ns
+Visited Nodes number: 7631
+Path: 
+10Node4e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road37e cost: 32.4	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 95.6
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 1268831 ns
+Visited Nodes number: 598
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 21.0	Road17e cost: 15.0	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 135.5
+--------------------------------------
+---------------Day 10-----------------
+------------IDA* Results: -------------
+Execution Time: 37934219 ns
+Visited Nodes number: 26670
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 44.1	Road101e cost: 17.1	
+Total Predicted Cost: 94.2
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 1037871 ns
+Visited Nodes number: 275
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 48.75	Road0e cost: 18.900000000000002	Road17e cost: 18.75	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 149.60000000000002
+--------------------------------------
+---------------Day 11-----------------
+------------IDA* Results: -------------
+Execution Time: 2076744 ns
+Visited Nodes number: 1208
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 48.75	Road0e cost: 21.0	Road17e cost: 15.0	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 28.0	
+Total Predicted Cost: 150.75
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 1892652 ns
+Visited Nodes number: 1006
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 48.75	Road0e cost: 21.0	Road17e cost: 15.0	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 28.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 148.05
+--------------------------------------
+---------------Day 12-----------------
+------------IDA* Results: -------------
+Execution Time: 41250590 ns
+Visited Nodes number: 27023
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 44.1	Road101e cost: 17.1	
+Total Predicted Cost: 94.2
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 74681930 ns
+Visited Nodes number: 46921
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road36e cost: 41.25	Road144e cost: 44.1	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 102.45
+--------------------------------------
+---------------Day 13-----------------
+------------IDA* Results: -------------
+Execution Time: 10584145 ns
+Visited Nodes number: 7899
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 29.7	Road144e cost: 44.1	Road101e cost: 17.1	
+Total Predicted Cost: 90.9
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 1849161 ns
+Visited Nodes number: 621
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 48.75	Road0e cost: 21.0	Road17e cost: 18.75	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 151.7
+--------------------------------------
+---------------Day 14-----------------
+------------IDA* Results: -------------
+Execution Time: 19865807 ns
+Visited Nodes number: 12654
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 44.1	Road101e cost: 19.0	
+Total Predicted Cost: 96.1
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 9448833 ns
+Visited Nodes number: 6790
+Path: 
+10Node4e -> 10Node1e -> 10Node0e -> 10Node6e -> 10Node2e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road13e cost: 80.0	Road0e cost: 18.900000000000002	Road7e cost: 8.0	Road24e cost: 56.25	Road23e cost: 4.5	Road144e cost: 44.1	Road101e cost: 19.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 230.75
+--------------------------------------
+---------------Day 15-----------------
+------------IDA* Results: -------------
+Execution Time: 37318924 ns
+Visited Nodes number: 24474
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 44.1	Road101e cost: 17.1	
+Total Predicted Cost: 94.2
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 1251750 ns
+Visited Nodes number: 201
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 18.900000000000002	Road15e cost: 36.0	Road144e cost: 44.1	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 155.10000000000002
+--------------------------------------
+---------------Day 16-----------------
+------------IDA* Results: -------------
+Execution Time: 13012373 ns
+Visited Nodes number: 6304
+Path: 
+10Node4e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road37e cost: 32.4	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 92.9
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 6747436 ns
+Visited Nodes number: 2569
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 48.75	Road7e cost: 7.2	Road145e cost: 33.75	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 125.9
+--------------------------------------
+---------------Day 17-----------------
+------------IDA* Results: -------------
+Execution Time: 975916 ns
+Visited Nodes number: 254
+Path: 
+10Node4e -> 10Node0e -> 10Node2e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road2e cost: 25.2	Road23e cost: 4.5	Road144e cost: 49.0	Road101e cost: 19.0	
+Total Predicted Cost: 136.7
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 2400607 ns
+Visited Nodes number: 822
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 18.900000000000002	Road17e cost: 13.5	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 35.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 140.5
+--------------------------------------
+---------------Day 18-----------------
+------------IDA* Results: -------------
+Execution Time: 3053362 ns
+Visited Nodes number: 1300
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 26.25	Road17e cost: 13.5	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 141.95
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 25003828 ns
+Visited Nodes number: 15244
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road36e cost: 29.7	Road144e cost: 49.0	Road101e cost: 19.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 97.7
+--------------------------------------
+---------------Day 19-----------------
+------------IDA* Results: -------------
+Execution Time: 31702112 ns
+Visited Nodes number: 17277
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 49.0	Road101e cost: 19.0	
+Total Predicted Cost: 101.0
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 9628126 ns
+Visited Nodes number: 5165
+Path: 
+10Node4e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road37e cost: 36.0	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 99.2
+--------------------------------------
+---------------Day 20-----------------
+------------IDA* Results: -------------
+Execution Time: 3019399 ns
+Visited Nodes number: 1138
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 18.900000000000002	Road17e cost: 13.5	Road145e cost: 33.75	Road86e cost: 9.9	Road89e cost: 28.0	
+Total Predicted Cost: 143.05
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 3364922 ns
+Visited Nodes number: 462
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 10Node2e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 48.75	Road7e cost: 7.2	Road24e cost: 45.0	Road23e cost: 4.5	Road144e cost: 49.0	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 171.55
+--------------------------------------
+---------------Day 21-----------------
+------------IDA* Results: -------------
+Execution Time: 8700460 ns
+Visited Nodes number: 5403
+Path: 
+10Node4e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road37e cost: 32.4	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 92.9
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 13084688 ns
+Visited Nodes number: 5678
+Path: 
+10Node4e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road37e cost: 32.4	Road145e cost: 24.3	Road93e cost: 18.900000000000002	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 92.69999999999999
+--------------------------------------
+---------------Day 22-----------------
+------------IDA* Results: -------------
+Execution Time: 828832 ns
+Visited Nodes number: 173
+Path: 
+10Node4e -> 10Node0e -> 10Node2e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road2e cost: 25.2	Road23e cost: 5.0	Road144e cost: 49.0	Road101e cost: 17.1	
+Total Predicted Cost: 135.3
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 904373 ns
+Visited Nodes number: 252
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 21.0	Road17e cost: 13.5	Road145e cost: 24.3	Road86e cost: 13.75	Road89e cost: 28.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 135.65
+--------------------------------------
+---------------Day 23-----------------
+------------IDA* Results: -------------
+Execution Time: 2660400 ns
+Visited Nodes number: 730
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 10Node2e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road7e cost: 10.0	Road24e cost: 45.0	Road23e cost: 5.0	Road144e cost: 49.0	Road101e cost: 19.0	
+Total Predicted Cost: 167.0
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 3868980 ns
+Visited Nodes number: 982
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 10Node2e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 48.75	Road7e cost: 7.2	Road24e cost: 45.0	Road23e cost: 6.25	Road144e cost: 49.0	Road101e cost: 19.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 175.2
+--------------------------------------
+---------------Day 24-----------------
+------------IDA* Results: -------------
+Execution Time: 2056376 ns
+Visited Nodes number: 641
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 10Node2e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road7e cost: 7.2	Road24e cost: 45.0	Road23e cost: 4.5	Road144e cost: 61.25	Road101e cost: 17.1	
+Total Predicted Cost: 174.04999999999998
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 10533320 ns
+Visited Nodes number: 5667
+Path: 
+10Node4e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road37e cost: 36.0	Road145e cost: 24.3	Road86e cost: 9.9	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 95.4
+--------------------------------------
+---------------Day 25-----------------
+------------IDA* Results: -------------
+Execution Time: 16973705 ns
+Visited Nodes number: 11671
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 44.1	Road101e cost: 19.0	
+Total Predicted Cost: 96.1
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 41271739 ns
+Visited Nodes number: 29100
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road36e cost: 41.25	Road144e cost: 44.1	Road101e cost: 19.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 104.35
+--------------------------------------
+---------------Day 26-----------------
+------------IDA* Results: -------------
+Execution Time: 4483343 ns
+Visited Nodes number: 2312
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 10Node2e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road7e cost: 7.2	Road24e cost: 45.0	Road23e cost: 5.0	Road144e cost: 61.25	Road101e cost: 19.0	
+Total Predicted Cost: 176.45
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 1242682 ns
+Visited Nodes number: 594
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 26.25	Road17e cost: 13.5	Road145e cost: 24.3	Road93e cost: 21.0	Road101e cost: 19.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 139.15
+--------------------------------------
+---------------Day 27-----------------
+------------IDA* Results: -------------
+Execution Time: 1306482 ns
+Visited Nodes number: 295
+Path: 
+10Node4e -> 10Node0e -> 10Node2e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road2e cost: 25.2	Road23e cost: 5.0	Road144e cost: 49.0	Road101e cost: 17.1	
+Total Predicted Cost: 135.3
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 5780967 ns
+Visited Nodes number: 2820
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 48.75	Road7e cost: 10.0	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 35.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 129.05
+--------------------------------------
+---------------Day 28-----------------
+------------IDA* Results: -------------
+Execution Time: 784059 ns
+Visited Nodes number: 195
+Path: 
+10Node4e -> 10Node0e -> 10Node2e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road2e cost: 28.0	Road23e cost: 4.5	Road144e cost: 49.0	Road101e cost: 19.0	
+Total Predicted Cost: 139.5
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 2504641 ns
+Visited Nodes number: 663
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 18.900000000000002	Road17e cost: 18.75	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 28.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 138.75
+--------------------------------------
+---------------Day 29-----------------
+------------IDA* Results: -------------
+Execution Time: 53416187 ns
+Visited Nodes number: 34620
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 44.1	Road101e cost: 17.1	
+Total Predicted Cost: 94.2
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 81816546 ns
+Visited Nodes number: 49969
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road36e cost: 41.25	Road144e cost: 44.1	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 102.45
+--------------------------------------
+---------------Day 30-----------------
+------------IDA* Results: -------------
+Execution Time: 14454808 ns
+Visited Nodes number: 10944
+Path: 
+10Node4e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road13e cost: 64.0	Road17e cost: 18.75	Road145e cost: 33.75	Road86e cost: 11.0	Road89e cost: 35.0	
+Total Predicted Cost: 162.5
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 7206129 ns
+Visited Nodes number: 4563
+Path: 
+10Node4e -> 10Node1e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road13e cost: 64.0	Road0e cost: 18.900000000000002	Road7e cost: 10.0	Road145e cost: 24.3	Road93e cost: 21.0	Road101e cost: 19.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 157.2
+--------------------------------------
+---------------Day 31-----------------
+------------IDA* Results: -------------
+Execution Time: 10589555 ns
+Visited Nodes number: 7838
+Path: 
+10Node4e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road13e cost: 80.0	Road17e cost: 15.0	Road145e cost: 33.75	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 164.95
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 1323904 ns
+Visited Nodes number: 319
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 48.75	Road0e cost: 18.900000000000002	Road17e cost: 15.0	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 143.15
+--------------------------------------
+---------------Day 32-----------------
+------------IDA* Results: -------------
+Execution Time: 1532661 ns
+Visited Nodes number: 848
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 18.900000000000002	Road17e cost: 13.5	Road145e cost: 24.3	Road93e cost: 21.0	Road101e cost: 17.1	
+Total Predicted Cost: 133.8
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 5042043 ns
+Visited Nodes number: 2631
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 39.0	Road7e cost: 7.2	Road145e cost: 24.3	Road93e cost: 21.0	Road101e cost: 19.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 110.5
+--------------------------------------
+---------------Day 33-----------------
+------------IDA* Results: -------------
+Execution Time: 22064517 ns
+Visited Nodes number: 14394
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 49.0	Road101e cost: 17.1	
+Total Predicted Cost: 99.1
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 12032280 ns
+Visited Nodes number: 6256
+Path: 
+10Node4e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road37e cost: 32.4	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 92.9
+--------------------------------------
+---------------Day 34-----------------
+------------IDA* Results: -------------
+Execution Time: 20261754 ns
+Visited Nodes number: 12906
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 49.0	Road101e cost: 17.1	
+Total Predicted Cost: 99.1
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 898261 ns
+Visited Nodes number: 226
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 18.900000000000002	Road17e cost: 18.75	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 135.95000000000002
+--------------------------------------
+---------------Day 35-----------------
+------------IDA* Results: -------------
+Execution Time: 12046556 ns
+Visited Nodes number: 4605
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road7e cost: 10.0	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 28.0	
+Total Predicted Cost: 115.0
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 13443616 ns
+Visited Nodes number: 9341
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road36e cost: 29.7	Road144e cost: 44.1	Road101e cost: 19.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 92.8
+--------------------------------------
+---------------Day 36-----------------
+------------IDA* Results: -------------
+Execution Time: 4341388 ns
+Visited Nodes number: 1946
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road7e cost: 7.2	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 106.7
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 1113983 ns
+Visited Nodes number: 337
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 18.900000000000002	Road17e cost: 18.75	Road145e cost: 27.0	Road86e cost: 9.9	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 134.85
+--------------------------------------
+---------------Day 37-----------------
+------------IDA* Results: -------------
+Execution Time: 1275203 ns
+Visited Nodes number: 416
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 21.0	Road17e cost: 13.5	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 28.0	
+Total Predicted Cost: 136.8
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 19534289 ns
+Visited Nodes number: 11533
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road36e cost: 29.7	Road144e cost: 49.0	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 95.8
+--------------------------------------
+---------------Day 38-----------------
+------------IDA* Results: -------------
+Execution Time: 3295783 ns
+Visited Nodes number: 1307
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 18.900000000000002	Road17e cost: 15.0	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 35.0	
+Total Predicted Cost: 143.2
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 1305469 ns
+Visited Nodes number: 647
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 18.900000000000002	Road17e cost: 13.5	Road145e cost: 27.0	Road93e cost: 18.900000000000002	Road101e cost: 19.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 132.4
+--------------------------------------
+---------------Day 39-----------------
+------------IDA* Results: -------------
+Execution Time: 8122434 ns
+Visited Nodes number: 5068
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road7e cost: 7.2	Road145e cost: 33.75	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 116.15
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 1374869 ns
+Visited Nodes number: 588
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 26.25	Road17e cost: 13.5	Road145e cost: 27.0	Road93e cost: 18.900000000000002	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 137.85
+--------------------------------------
+---------------Day 40-----------------
+------------IDA* Results: -------------
+Execution Time: 1979975 ns
+Visited Nodes number: 1092
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 26.25	Road17e cost: 18.75	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 144.5
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 2817833 ns
+Visited Nodes number: 632
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 48.75	Road0e cost: 18.900000000000002	Road17e cost: 18.75	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 149.60000000000002
+--------------------------------------
+---------------Day 41-----------------
+------------IDA* Results: -------------
+Execution Time: 4244799 ns
+Visited Nodes number: 1558
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 48.75	Road7e cost: 7.2	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 35.0	
+Total Predicted Cost: 126.25
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 6701801 ns
+Visited Nodes number: 3735
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road7e cost: 8.0	Road145e cost: 27.0	Road93e cost: 21.0	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 108.19999999999999
+--------------------------------------
+---------------Day 42-----------------
+------------IDA* Results: -------------
+Execution Time: 17197571 ns
+Visited Nodes number: 9529
+Path: 
+10Node4e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road37e cost: 32.4	Road145e cost: 27.0	Road93e cost: 21.0	Road101e cost: 19.0	
+Total Predicted Cost: 99.4
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 1216333 ns
+Visited Nodes number: 181
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 21.0	Road15e cost: 32.4	Road144e cost: 49.0	Road101e cost: 19.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 156.5
+--------------------------------------
+---------------Day 43-----------------
+------------IDA* Results: -------------
+Execution Time: 1751179 ns
+Visited Nodes number: 576
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 18.900000000000002	Road17e cost: 18.75	Road145e cost: 27.0	Road93e cost: 21.0	Road101e cost: 17.1	
+Total Predicted Cost: 141.75
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 1334784 ns
+Visited Nodes number: 613
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 26.25	Road17e cost: 13.5	Road145e cost: 24.3	Road93e cost: 21.0	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 137.25
+--------------------------------------
+---------------Day 44-----------------
+------------IDA* Results: -------------
+Execution Time: 2043763 ns
+Visited Nodes number: 1260
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 18.900000000000002	Road17e cost: 15.0	Road145e cost: 33.75	Road86e cost: 11.0	Road89e cost: 35.0	
+Total Predicted Cost: 152.65
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 5431828 ns
+Visited Nodes number: 2232
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 39.0	Road7e cost: 10.0	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 35.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 122.0
+--------------------------------------
+---------------Day 45-----------------
+------------IDA* Results: -------------
+Execution Time: 17208972 ns
+Visited Nodes number: 9390
+Path: 
+10Node4e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road37e cost: 36.0	Road145e cost: 27.0	Road93e cost: 21.0	Road101e cost: 19.0	
+Total Predicted Cost: 103.0
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 4726265 ns
+Visited Nodes number: 1446
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 48.75	Road7e cost: 8.0	Road145e cost: 24.3	Road86e cost: 13.75	Road89e cost: 28.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 122.8
+--------------------------------------
+---------------Day 46-----------------
+------------IDA* Results: -------------
+Execution Time: 24660008 ns
+Visited Nodes number: 15140
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 44.1	Road101e cost: 19.0	
+Total Predicted Cost: 96.1
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 13510751 ns
+Visited Nodes number: 8045
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road36e cost: 29.7	Road144e cost: 44.1	Road101e cost: 19.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 92.8
+--------------------------------------
+---------------Day 47-----------------
+------------IDA* Results: -------------
+Execution Time: 1706796 ns
+Visited Nodes number: 660
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 21.0	Road17e cost: 18.75	Road145e cost: 33.75	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 148.7
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 4134965 ns
+Visited Nodes number: 1756
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 48.75	Road7e cost: 10.0	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 121.95
+--------------------------------------
+---------------Day 48-----------------
+------------IDA* Results: -------------
+Execution Time: 8963119 ns
+Visited Nodes number: 6919
+Path: 
+10Node4e -> 10Node1e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road13e cost: 80.0	Road0e cost: 18.900000000000002	Road7e cost: 7.2	Road145e cost: 33.75	Road93e cost: 21.0	Road101e cost: 19.0	
+Total Predicted Cost: 179.85000000000002
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 2087745 ns
+Visited Nodes number: 788
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 48.75	Road0e cost: 18.900000000000002	Road17e cost: 18.75	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 35.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 159.4
+--------------------------------------
+---------------Day 49-----------------
+------------IDA* Results: -------------
+Execution Time: 904784 ns
+Visited Nodes number: 236
+Path: 
+10Node4e -> 10Node0e -> 10Node2e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road2e cost: 25.2	Road23e cost: 5.0	Road144e cost: 49.0	Road101e cost: 19.0	
+Total Predicted Cost: 137.2
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 22120393 ns
+Visited Nodes number: 14400
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road36e cost: 29.7	Road144e cost: 49.0	Road101e cost: 19.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 97.7
+--------------------------------------
+---------------Day 50-----------------
+------------IDA* Results: -------------
+Execution Time: 1901187 ns
+Visited Nodes number: 1019
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 21.0	Road17e cost: 13.5	Road145e cost: 33.75	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 143.45
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 3337571 ns
+Visited Nodes number: 1005
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 48.75	Road7e cost: 7.2	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 119.15
+--------------------------------------
+---------------Day 51-----------------
+------------IDA* Results: -------------
+Execution Time: 2521522 ns
+Visited Nodes number: 1014
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 21.0	Road17e cost: 18.75	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 28.0	
+Total Predicted Cost: 144.75
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 3896060 ns
+Visited Nodes number: 2704
+Path: 
+10Node4e -> 10Node1e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road13e cost: 80.0	Road0e cost: 18.900000000000002	Road7e cost: 7.2	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 28.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 169.4
+--------------------------------------
+---------------Day 52-----------------
+------------IDA* Results: -------------
+Execution Time: 28875001 ns
+Visited Nodes number: 17960
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 44.1	Road101e cost: 23.75	
+Total Predicted Cost: 100.85
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 18416009 ns
+Visited Nodes number: 12806
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road36e cost: 29.7	Road144e cost: 44.1	Road101e cost: 23.75	
+Total Predicted Cost: 0.0
+Total Real Cost: 97.55
+--------------------------------------
+---------------Day 53-----------------
+------------IDA* Results: -------------
+Execution Time: 2334073 ns
+Visited Nodes number: 1485
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 21.0	Road17e cost: 15.0	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 138.2
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 1085820 ns
+Visited Nodes number: 338
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 21.0	Road15e cost: 36.0	Road144e cost: 49.0	Road101e cost: 19.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 160.1
+--------------------------------------
+---------------Day 54-----------------
+------------IDA* Results: -------------
+Execution Time: 53784854 ns
+Visited Nodes number: 35281
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 44.1	Road101e cost: 17.1	
+Total Predicted Cost: 94.2
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 10286071 ns
+Visited Nodes number: 7357
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road36e cost: 29.7	Road144e cost: 44.1	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 90.9
+--------------------------------------
+---------------Day 55-----------------
+------------IDA* Results: -------------
+Execution Time: 1277797 ns
+Visited Nodes number: 467
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 18.900000000000002	Road15e cost: 32.4	Road144e cost: 49.0	Road101e cost: 23.75	
+Total Predicted Cost: 163.05
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 2199262 ns
+Visited Nodes number: 1332
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 48.75	Road0e cost: 18.900000000000002	Road17e cost: 13.5	Road145e cost: 33.75	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 151.10000000000002
+--------------------------------------
+---------------Day 56-----------------
+------------IDA* Results: -------------
+Execution Time: 3637849 ns
+Visited Nodes number: 1701
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 48.75	Road7e cost: 10.0	Road145e cost: 27.0	Road86e cost: 13.75	Road89e cost: 25.2	
+Total Predicted Cost: 124.7
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 4826030 ns
+Visited Nodes number: 1720
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 39.0	Road7e cost: 7.2	Road145e cost: 33.75	Road86e cost: 13.75	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 118.9
+--------------------------------------
+---------------Day 57-----------------
+------------IDA* Results: -------------
+Execution Time: 3159479 ns
+Visited Nodes number: 1325
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 48.75	Road7e cost: 8.0	Road145e cost: 27.0	Road86e cost: 13.75	Road89e cost: 25.2	
+Total Predicted Cost: 122.7
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 5160803 ns
+Visited Nodes number: 2561
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 39.0	Road7e cost: 10.0	Road145e cost: 27.0	Road86e cost: 13.75	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 114.95
+--------------------------------------
+---------------Day 58-----------------
+------------IDA* Results: -------------
+Execution Time: 15768122 ns
+Visited Nodes number: 11804
+Path: 
+10Node4e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road13e cost: 57.6	Road17e cost: 15.0	Road145e cost: 33.75	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 142.55
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 5588389 ns
+Visited Nodes number: 2914
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 10Node2e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road7e cost: 7.2	Road24e cost: 45.0	Road23e cost: 5.0	Road144e cost: 61.25	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 170.64999999999998
+--------------------------------------
+---------------Day 59-----------------
+------------IDA* Results: -------------
+Execution Time: 33865478 ns
+Visited Nodes number: 22845
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 41.25	Road144e cost: 44.1	Road101e cost: 19.0	
+Total Predicted Cost: 104.35
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 14560675 ns
+Visited Nodes number: 10367
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 44.1	Road101e cost: 19.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 96.1
+--------------------------------------
+---------------Day 60-----------------
+------------IDA* Results: -------------
+Execution Time: 17163969 ns
+Visited Nodes number: 9326
+Path: 
+10Node4e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road37e cost: 36.0	Road145e cost: 27.0	Road93e cost: 21.0	Road101e cost: 17.1	
+Total Predicted Cost: 101.1
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 21004325 ns
+Visited Nodes number: 11308
+Path: 
+10Node4e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road37e cost: 36.0	Road145e cost: 24.3	Road93e cost: 21.0	Road101e cost: 23.75	
+Total Predicted Cost: 0.0
+Total Real Cost: 105.05
+--------------------------------------
+---------------Day 61-----------------
+------------IDA* Results: -------------
+Execution Time: 56997954 ns
+Visited Nodes number: 35004
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 44.1	Road101e cost: 17.1	
+Total Predicted Cost: 94.2
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 15154480 ns
+Visited Nodes number: 9452
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road36e cost: 29.7	Road144e cost: 44.1	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 90.9
+--------------------------------------
+---------------Day 62-----------------
+------------IDA* Results: -------------
+Execution Time: 21022410 ns
+Visited Nodes number: 13492
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 44.1	Road101e cost: 19.0	
+Total Predicted Cost: 96.1
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 13276615 ns
+Visited Nodes number: 9008
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road36e cost: 29.7	Road144e cost: 44.1	Road101e cost: 19.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 92.8
+--------------------------------------
+---------------Day 63-----------------
+------------IDA* Results: -------------
+Execution Time: 22742840 ns
+Visited Nodes number: 14588
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 44.1	Road101e cost: 19.0	
+Total Predicted Cost: 96.1
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 15313336 ns
+Visited Nodes number: 10089
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road36e cost: 29.7	Road144e cost: 44.1	Road101e cost: 19.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 92.8
+--------------------------------------
+---------------Day 64-----------------
+------------IDA* Results: -------------
+Execution Time: 2651774 ns
+Visited Nodes number: 669
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 10Node2e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road7e cost: 7.2	Road24e cost: 45.0	Road23e cost: 5.0	Road144e cost: 44.1	Road101e cost: 17.1	
+Total Predicted Cost: 157.4
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 1067577 ns
+Visited Nodes number: 494
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 18.900000000000002	Road17e cost: 13.5	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 28.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 130.8
+--------------------------------------
+---------------Day 65-----------------
+------------IDA* Results: -------------
+Execution Time: 1780172 ns
+Visited Nodes number: 1058
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 18.900000000000002	Road17e cost: 15.0	Road145e cost: 33.75	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 142.85000000000002
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 1365100 ns
+Visited Nodes number: 689
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 18.900000000000002	Road17e cost: 13.5	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 128.0
+--------------------------------------
+---------------Day 66-----------------
+------------IDA* Results: -------------
+Execution Time: 9821406 ns
+Visited Nodes number: 5608
+Path: 
+10Node4e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road37e cost: 32.4	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 92.9
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 11842567 ns
+Visited Nodes number: 6490
+Path: 
+10Node4e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road37e cost: 32.4	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 95.6
+--------------------------------------
+---------------Day 67-----------------
+------------IDA* Results: -------------
+Execution Time: 5497430 ns
+Visited Nodes number: 2247
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road7e cost: 8.0	Road145e cost: 24.3	Road86e cost: 9.9	Road89e cost: 28.0	
+Total Predicted Cost: 109.2
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 3919343 ns
+Visited Nodes number: 2430
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 18.900000000000002	Road17e cost: 13.5	Road145e cost: 27.0	Road86e cost: 9.9	Road89e cost: 28.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 132.4
+--------------------------------------
+---------------Day 68-----------------
+------------IDA* Results: -------------
+Execution Time: 21735345 ns
+Visited Nodes number: 13597
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 29.7	Road144e cost: 49.0	Road101e cost: 17.1	
+Total Predicted Cost: 95.8
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 1806732 ns
+Visited Nodes number: 272
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 10Node2e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 48.75	Road7e cost: 10.0	Road24e cost: 45.0	Road23e cost: 5.0	Road144e cost: 49.0	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 174.85
+--------------------------------------
+---------------Day 69-----------------
+------------IDA* Results: -------------
+Execution Time: 23290690 ns
+Visited Nodes number: 15585
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 29.7	Road144e cost: 49.0	Road101e cost: 19.0	
+Total Predicted Cost: 97.7
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 1200364 ns
+Visited Nodes number: 590
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 18.900000000000002	Road17e cost: 13.5	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 28.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 130.8
+--------------------------------------
+---------------Day 70-----------------
+------------IDA* Results: -------------
+Execution Time: 7890313 ns
+Visited Nodes number: 3752
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road7e cost: 10.0	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 112.2
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 12657444 ns
+Visited Nodes number: 9783
+Path: 
+10Node4e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road13e cost: 57.6	Road17e cost: 18.75	Road145e cost: 33.75	Road86e cost: 11.0	Road89e cost: 35.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 156.1
+--------------------------------------
+---------------Day 71-----------------
+------------IDA* Results: -------------
+Execution Time: 2015200 ns
+Visited Nodes number: 1042
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 21.0	Road17e cost: 13.5	Road145e cost: 33.75	Road86e cost: 13.75	Road89e cost: 25.2	
+Total Predicted Cost: 146.2
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 3216916 ns
+Visited Nodes number: 1148
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 48.75	Road7e cost: 10.0	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 121.95
+--------------------------------------
+---------------Day 72-----------------
+------------IDA* Results: -------------
+Execution Time: 9920610 ns
+Visited Nodes number: 5140
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road7e cost: 7.2	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 35.0	
+Total Predicted Cost: 119.2
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 732783 ns
+Visited Nodes number: 152
+Path: 
+10Node4e -> 10Node0e -> 10Node2e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 48.75	Road2e cost: 25.2	Road23e cost: 5.0	Road144e cost: 49.0	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 145.05
+--------------------------------------
+---------------Day 73-----------------
+------------IDA* Results: -------------
+Execution Time: 1903582 ns
+Visited Nodes number: 503
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 21.0	Road17e cost: 15.0	Road145e cost: 33.75	Road86e cost: 11.0	Road89e cost: 35.0	
+Total Predicted Cost: 154.75
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 2538604 ns
+Visited Nodes number: 1284
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 26.25	Road17e cost: 13.5	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 35.0	
+Total Predicted Cost: 0.0
+Total Real Cost: 145.15
+--------------------------------------
+---------------Day 74-----------------
+------------IDA* Results: -------------
+Execution Time: 2365792 ns
+Visited Nodes number: 1404
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road0e cost: 26.25	Road17e cost: 15.0	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 35.0	
+Total Predicted Cost: 153.25
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 19330110 ns
+Visited Nodes number: 13045
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road36e cost: 29.7	Road144e cost: 49.0	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 95.8
+--------------------------------------
+---------------Day 75-----------------
+------------IDA* Results: -------------
+Execution Time: 5742967 ns
+Visited Nodes number: 1819
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 48.75	Road7e cost: 7.2	Road145e cost: 33.75	Road86e cost: 11.0	Road89e cost: 28.0	
+Total Predicted Cost: 128.7
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 1016711 ns
+Visited Nodes number: 284
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 21.0	Road17e cost: 13.5	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 130.1
+--------------------------------------
+---------------Day 76-----------------
+------------IDA* Results: -------------
+Execution Time: 12881049 ns
+Visited Nodes number: 6692
+Path: 
+10Node4e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road37e cost: 32.4	Road145e cost: 24.3	Road93e cost: 21.0	Road101e cost: 17.1	
+Total Predicted Cost: 94.80000000000001
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 7648472 ns
+Visited Nodes number: 5840
+Path: 
+10Node4e -> 10Node1e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road13e cost: 64.0	Road0e cost: 18.900000000000002	Road7e cost: 7.2	Road145e cost: 33.75	Road93e cost: 21.0	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 161.95
+--------------------------------------
+---------------Day 77-----------------
+------------IDA* Results: -------------
+Execution Time: 2208369 ns
+Visited Nodes number: 497
+Path: 
+10Node4e -> 10Node0e -> 10Node2e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road2e cost: 25.2	Road23e cost: 4.5	Road144e cost: 61.25	Road101e cost: 17.1	
+Total Predicted Cost: 147.05
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 880658 ns
+Visited Nodes number: 266
+Path: 
+10Node4e -> 10Node0e -> 10Node1e -> 10Node6e -> 11Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 35.1	Road0e cost: 21.0	Road17e cost: 18.75	Road145e cost: 24.3	Road93e cost: 21.0	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 137.25
+--------------------------------------
+---------------Day 78-----------------
+------------IDA* Results: -------------
+Execution Time: 23427325 ns
+Visited Nodes number: 15479
+Path: 
+10Node4e -> 10Node5e -> 11Node8e -> 11Node10e
+Prediction Cost for each road: 
+Road36e cost: 33.0	Road144e cost: 49.0	Road101e cost: 17.1	
+Total Predicted Cost: 99.1
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 727624 ns
+Visited Nodes number: 167
+Path: 
+10Node4e -> 10Node0e -> 10Node2e -> 10Node5e -> 11Node8e -> 11Node10e
+Actual Cost for each road: 
+Road6e cost: 39.0	Road2e cost: 28.0	Road23e cost: 6.25	Road144e cost: 49.0	Road101e cost: 17.1	
+Total Predicted Cost: 0.0
+Total Real Cost: 139.35
+--------------------------------------
+---------------Day 79-----------------
+------------IDA* Results: -------------
+Execution Time: 4835858 ns
+Visited Nodes number: 1921
+Path: 
+10Node4e -> 10Node0e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Prediction Cost for each road: 
+Road6e cost: 39.0	Road7e cost: 7.2	Road145e cost: 24.3	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 106.7
+Total Real Cost: 0.0
+--------------------------------------
+------------IDA* Results: -------------
+Execution Time: 11558549 ns
+Visited Nodes number: 6620
+Path: 
+10Node4e -> 10Node6e -> 11Node5e -> 11Node3e -> 11Node10e
+Actual Cost for each road: 
+Road37e cost: 32.4	Road145e cost: 27.0	Road86e cost: 11.0	Road89e cost: 25.2	
+Total Predicted Cost: 0.0
+Total Real Cost: 95.6
+--------------------------------------
+The total mean cost is: 127.105625
