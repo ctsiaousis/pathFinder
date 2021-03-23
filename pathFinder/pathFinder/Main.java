@@ -8,7 +8,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		FileParser mParser = new FileParser();
 		Setup inputData = new Setup();
-		mParser.parse("sampleGraph3.txt", inputData);
+		mParser.parse("sampleGraph2.txt", inputData);
 		System.out.println(inputData.roads.size());
 		System.out.println(inputData.predictions.size());
 //		System.out.println(inputData.actualTraffic.get(0))
@@ -28,6 +28,11 @@ public class Main {
 				alg.runIDAStar(inputData.getActualTrafficDay(i));
 				alg.printResults(inputData.getActualTrafficDay(i));
 //////				
+				
+//				alg.runUCS(inputData.getPredictionDay(i));
+//				alg.printResults(inputData.getPredictionDay(i));
+//				alg.runUCS(inputData.getActualTrafficDay(i));
+//				alg.printResults(inputData.getActualTrafficDay(i));
 //				alg.runDijkstra(inputData.getPredictionDay(i));
 //				alg.printResults(inputData.getPredictionDay(i));
 //				alg.runDijkstra(inputData.getActualTrafficDay(i));
