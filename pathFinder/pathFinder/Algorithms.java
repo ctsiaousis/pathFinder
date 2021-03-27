@@ -16,6 +16,7 @@ public class Algorithms {
 	private ArrayList<String> path;
 	private String currentAlgo;
 
+	/////////////////////////////////////////// UTILS///////////////////////////////////////////
 	private void reset() {
 		this.currentAlgo = "";
 		this.executionTime = 0;
@@ -54,9 +55,17 @@ public class Algorithms {
 			if (dst == src)
 				break;
 		}
-
 	}
 
+	private ArrayList<String> pathUpsideDown(ArrayList<String> prevPath) {
+		ArrayList<String> newPath = new ArrayList<String>();
+		for (int i = prevPath.size() - 1; i >= 0; i--) {
+			newPath.add(prevPath.get(i));
+		}
+		return newPath;
+	}
+
+	/////////////////////////////////////////// ALGOS///////////////////////////////////////////
 	public void runBFS() {
 		reset();
 		this.currentAlgo = "BFS";
@@ -227,13 +236,60 @@ public class Algorithms {
 		}
 	}
 
-	private ArrayList<String> pathUpsideDown(ArrayList<String> prevPath) {
-		ArrayList<String> newPath = new ArrayList<String>();
-		for (int i = prevPath.size() - 1; i >= 0; i--) {
-			newPath.add(prevPath.get(i));
+	public void runLRTAStar(Day dayIn) {
+		reset();
+		this.currentAlgo = "LRTA*";
+		long tic = System.nanoTime();
+		Node srcNode = this.setup.findNodeByName(this.setup.source);
+		int networkSize = this.setup.network.size();
+		int parentNode[] = new int[networkSize];
+		for (int i = 0; i < networkSize; i++)
+			parentNode[i] = -1;
+		PriorityQueue<Node> queue = new PriorityQueue<Node>(networkSize, srcNode.new SortbyFringe());
+		
+		queue.add(srcNode);
+		Heuristic2 h = new Heuristic2(this.setup, dayIn);
+		srcNode.currentCost = 0;
+		srcNode.fringeCost = h.giveTheWeight(srcNode, dayIn);
+		boolean found = false;
+		while (!queue.isEmpty()) {
+			Node currentNode = queue.poll();
+			if(currentNode.name.equals(this.setup.destination)) {
+				found = true;
+				break;
+			}
+
+			PriorityQueue<Road> curRoads = new PriorityQueue<Road>(
+					currentNode.roads.size(),
+					currentNode.roads.get(0).new SortbyWeight()
+				);
+			
+			for(Road r: currentNode.roads) curRoads.add(r);
+			
+			Node childNode;
+			Road cheaperRoad = curRoads.poll();
+			if (cheaperRoad.dstNode == currentNode)
+				childNode = cheaperRoad.srcNode;
+			else
+				childNode = cheaperRoad.dstNode;
+			
+
+			double cost = dayIn.calculateWeight(cheaperRoad);
+			double tentativeCost = currentNode.currentCost + cost;
+			childNode.currentCost = tentativeCost;
+			childNode.fringeCost = tentativeCost + h.giveTheWeight(childNode, dayIn);
+			queue.add(childNode);
+			parentNode[setup.network.indexOf(childNode)] = setup.network.indexOf(currentNode);
 		}
-		return newPath;
+		if (found) {
+			this.calculatePath(parentNode);
+			long toc = System.nanoTime();
+			this.executionTime = toc - tic;
+			return;
+		}
 	}
+
+	/////////////////////////////////////////// PRINTS///////////////////////////////////////////
 
 	private void printWeightForEachRoad(Day d) {
 		double roadCost;
@@ -245,34 +301,7 @@ public class Algorithms {
 		}
 	}
 
-//	public void printResults(Day d1) {
-//		if (d1.isPrediction) {
-//			calcPredictedCostFromPath(d1);
-//		} else {
-//			calcRealCostFromPath(d1);
-//		}
-//		System.out.println("------------" + currentAlgo + " Results: -------------");
-//		System.out.println("Execution Time: " + this.executionTime + " ns");
-//		System.out.println("Visited Nodes number: " + this.nodesVisited);
-//		System.out.println("Path: ");
-//
-//		for (int i = path.size() - 1; i >= 0; i--) {
-//			System.out.printf(this.path.get(i) + (i == 0 ? "\n" : " -> "));
-//		}
-//		if (d1.getIsPrediction()) {
-//			System.out.println("Prediction Cost for each road: ");
-//			printWeightForEachRoad(d1);
-//		} else {
-//			System.out.println("Actual Cost for each road: ");
-//			printWeightForEachRoad(d1);
-//		}
-//		allDaysCost += this.realCost;
-//		System.out.println("\nTotal Predicted Cost: " + this.predictedCost);
-//		System.out.println("Total Real Cost: " + this.realCost);
-//		System.out.println("--------------------------------------");
-//	}
-
-	private void printResultsNew(Day pred, Day act) {
+	public void printResultsNew(Day pred, Day act) {
 		if (!pred.isPrediction)
 			System.err.println("Algorithms::printResultsNew -- WRONG DAYS");
 
@@ -311,7 +340,7 @@ public class Algorithms {
 	public void runAndPrint() {
 		int dayNum;
 		for (int i = 0; i < this.setup.actualTraffic.size(); i++) {
-			dayNum = i+1;
+			dayNum = i + 1;
 			System.out.println("Day " + dayNum);
 			runUCS(this.setup.getPredictionDay(i));
 			printResultsNew(this.setup.getPredictionDay(i), this.setup.getActualTrafficDay(i));

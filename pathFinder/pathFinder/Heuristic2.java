@@ -24,16 +24,18 @@ class Heuristic2 {
 
 	public double giveTheWeight(Node nodeIn, Day dayIn) {
 		double total = 0;
-		int nodeIndex = 0;
+		int nodeIndex = -1;
 		for (int i = path.size() - 1; i > 0; i--) {
 			if (this.path.get(i).equals(nodeIn.name)) {
 				nodeIndex = i;
 				break;
 			}
 		}
-		for (int j = nodeIndex; j > 0; j--) {
-			Road tmpRoad = this.setup.findConnectorRoad(this.path.get(j), this.path.get(j - 1));
-			total += dayIn.calculateWeight(tmpRoad);
+		if(nodeIndex != -1) { 
+			for (int j = nodeIndex; j > 0; j--) {
+				Road tmpRoad = this.setup.findConnectorRoad(this.path.get(j), this.path.get(j - 1));
+				total += dayIn.calculateWeight(tmpRoad);
+			}
 		}
 		return total;
 	}

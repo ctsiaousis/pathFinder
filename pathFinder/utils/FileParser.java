@@ -80,7 +80,8 @@ public class FileParser {
 				if (startingSymbol == -1 && endingSymbol == -1) {
 					if (currentSection == 0) {
 						System.out.println("De 3erw");
-//						return false;
+						myReader.close();
+						return false;
 					} else if (currentSection == 3) {
 //	        		System.out.println("Diabazw dromous");
 						mySetup.addRoad(createRoad(data));
@@ -117,18 +118,18 @@ public class FileParser {
 						outterSection = startingSymbol;
 					}
 				} else {// I've read closing symbol
-//		        System.out.println(data);
 					if (endingSymbol == 5) {
 						if (outterSection == 4) {
+//			        		System.out.println("Mera Pred");
 							tmpDay.setIsPrediction(true);
 							mySetup.addPredictionDay(tmpDay);
-//		        		System.out.println("Mera Pred");
 						} else if (outterSection == 6) {
+//			        		System.out.println("Mera Actual");
 							tmpDay.setIsPrediction(false);
 							mySetup.addActualTrafficDay(tmpDay);
-//		        		System.out.println("Mera Actual");
 						} else {
 							System.out.println("error");
+							myReader.close();
 							return false;
 						}
 					}
