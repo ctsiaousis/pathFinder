@@ -1,50 +1,28 @@
 package pathFinder;
 
 import utils.FileParser;
+import java.io.*;
 
 public class Main {
+	private static String inFile = "sampleGraph2.txt";
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) throws FileNotFoundException {
 		FileParser mParser = new FileParser();
 		Setup inputData = new Setup();
-		mParser.parse("sampleGraph2.txt", inputData);
-		System.out.println(inputData.roads.size());
-		System.out.println(inputData.predictions.size());
-//		System.out.println(inputData.actualTraffic.get(0))
-
-		System.out.println(inputData.actualTraffic.size());
-//		System.out.println(inputData.findRoadByName("ErgotelisAve").destNodeName);
-		if(inputData.validateData()) {
-			System.out.println("Valid Parse, continue");
-			System.out.println(inputData.network.size());
-//			System.out.println(inputData.findConnectorRoad("10Node1e","10Node2e").roadName);
+	    if(args.length == 0){
+	        System.out.println("No input file provided. Defaulting to: "+inFile);
+	    }else {
+	    	inFile = args[0];
+	    }
+		boolean isParseOK = mParser.parse(inFile, inputData);
+		String outFile = inFile.substring(0, inFile.lastIndexOf('.'))+"_out.txt";
+		
+		if (isParseOK && inputData.validateData()) {
+			System.out.println("Valid Parse, outputing to \"" + outFile + "\"");
+			PrintStream o = new PrintStream(new File(outFile));
+			System.setOut(o); // System.out now outputs to the file out.txt
 			Algorithms alg = new Algorithms(inputData);
-//			System.out.println(inputData.getActualTrafficDay(20).traffic);
-			for(int i=0 ; i<inputData.actualTraffic.size(); i++) {
-				System.out.println("---------------Day " +i+ "-----------------");
-				alg.runIDAStar(inputData.getPredictionDay(i));
-				alg.printResults(inputData.getPredictionDay(i));
-				alg.runIDAStar(inputData.getActualTrafficDay(i));
-				alg.printResults(inputData.getActualTrafficDay(i));
-//////				
-				
-//				alg.runUCS(inputData.getPredictionDay(i));
-//				alg.printResults(inputData.getPredictionDay(i));
-//				alg.runUCS(inputData.getActualTrafficDay(i));
-//				alg.printResults(inputData.getActualTrafficDay(i));
-//				alg.runDijkstra(inputData.getPredictionDay(i));
-//				alg.printResults(inputData.getPredictionDay(i));
-//				alg.runDijkstra(inputData.getActualTrafficDay(i));
-//				alg.printResults(inputData.getActualTrafficDay(i));
-//				alg.runUCS(inputData.getPredictionDay(i));
-//				alg.printResults(inputData.getPredictionDay(i));
-//				alg.runBFS();
-//				alg.printResults(inputData.getPredictionDay(i),inputData.getActualTrafficDay(i));
-			}
-			double cost=alg.printMeanCost()/80;
-			System.out.println("The total mean cost is: "+cost);
-			
+			alg.runAndPrint();
 		} else {
 			System.err.println("Parse check failed");
 			System.exit(0);
