@@ -4,7 +4,7 @@ import utils.FileParser;
 import java.io.*;
 
 public class Main {
-	private static String inFile = "sampleGraph2.txt";
+	private static String inFile = "sampleGraph3.txt";
 
 	public static void main(String[] args) throws FileNotFoundException {
 		FileParser mParser = new FileParser();
