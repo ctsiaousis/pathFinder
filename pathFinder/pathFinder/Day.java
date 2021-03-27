@@ -8,6 +8,10 @@ public class Day {
 	public List<Double> traffic;
 	public boolean isPrediction;
 	public double normalTrafficVal;
+	private double p1=0.6, p2=0.2, p3=0.2;
+	//p1 makes heavy -> normal
+	//p2 makes normal -> low
+	//p3 makes low -> normal
 
 	public Day() {
 		super();
@@ -41,15 +45,15 @@ public class Day {
 	}
 
 	private String weightWithOdds(String tr) {
-		double posib = Math.random();
 		if (this.isPrediction) {
-			if (posib <= 0.2) {
+			double posib = Math.random();
+			if (posib <= this.p3) {
 				if (tr.contains("low"))
 					return "normal";
-			} else if (posib > 0.8) {
+			} else if (posib > 1-this.p2) {
 				if (tr.contains("normal"))
 					return "low";
-			} else {
+			} else if (posib <= this.p1+this.p2){
 				if (tr.contains("heavy"))
 					return "normal";
 			}
