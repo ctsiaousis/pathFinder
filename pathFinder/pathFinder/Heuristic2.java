@@ -106,7 +106,7 @@ class Heuristic2 {
 
 	public void runDijkstra(Day dayIn) {
 		Node srcNode = this.setup.findNodeByName(this.setup.source);
-		double t = initializeWithDjikstra(srcNode, dayIn);
+		initializeWithDjikstra(srcNode, dayIn);
 //		System.out.println(t);
 	}
 }

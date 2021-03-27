@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Day {
-
 	public List<String> roadNames;
 	public List<Double> traffic;
 	public boolean isPrediction;
@@ -41,16 +40,34 @@ public class Day {
 		return r.weight * daysTraffic;
 	}
 
+	private String weightWithOdds(String tr) {
+		double posib = Math.random();
+		if (this.isPrediction) {
+			if (posib <= 0.2) {
+				if (tr.contains("low"))
+					return "normal";
+			} else if (posib > 0.8) {
+				if (tr.contains("normal"))
+					return "low";
+			} else {
+				if (tr.contains("heavy"))
+					return "normal";
+			}
+		}
+		return tr;
+	}
+
 	public void appendTouple(String name, String tr) {
 		roadNames.add(name);
-		if (tr.contains("low")) {
+		String newTraffic = weightWithOdds(tr);
+		if (newTraffic.contains("low")) {
 			traffic.add(normalTrafficVal * 0.9);
-		} else if (tr.contains("heavy")) {
+		} else if (newTraffic.contains("heavy")) {
 			traffic.add(normalTrafficVal * 1.25);
 		} else {
 			traffic.add(normalTrafficVal);
 		}
-
+		normalTrafficVal = 1;// reset for next tuple
 	}
 
 	public String getName(int i) {

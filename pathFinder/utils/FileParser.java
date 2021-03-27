@@ -63,7 +63,7 @@ public class FileParser {
 		day.appendTouple(items.get(0), items.get(1));
 	}
 
-	public void parse(String filePath, Setup mySetup) {
+	public boolean parse(String filePath, Setup mySetup) {
 		try {
 			File myObj = new File(filePath);
 			Scanner myReader = new Scanner(myObj);
@@ -80,6 +80,7 @@ public class FileParser {
 				if (startingSymbol == -1 && endingSymbol == -1) {
 					if (currentSection == 0) {
 						System.out.println("De 3erw");
+//						return false;
 					} else if (currentSection == 3) {
 //	        		System.out.println("Diabazw dromous");
 						mySetup.addRoad(createRoad(data));
@@ -128,16 +129,17 @@ public class FileParser {
 //		        		System.out.println("Mera Actual");
 						} else {
 							System.out.println("error");
+							return false;
 						}
 					}
 				}
 			}
-//	      System.out.println(mySetup.actualTraffic);
-
 			myReader.close();
+			return true;
 		} catch (FileNotFoundException e) {
 			System.out.println("An error occurred.");
 			e.printStackTrace();
+			return false;
 		}
 	}
 

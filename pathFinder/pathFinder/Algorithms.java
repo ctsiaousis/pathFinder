@@ -1,14 +1,17 @@
 package pathFinder;
 
-import java.util.*;
-import java.lang.Math;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.PriorityQueue;
 
 public class Algorithms {
 	private static final int FOUND = -3;
 	private Setup setup;
 	private int nodesVisited;
-	private double predictedCost, realCost, roadCost, totalCost;
-	public double allDaysCost;
+	private double predictedCost, realCost;
+	public double allDaysCost_UCS, allDaysCost_IDA;
 	private long executionTime;
 	private ArrayList<String> path;
 	private String currentAlgo;
@@ -20,7 +23,6 @@ public class Algorithms {
 		this.path = new ArrayList<String>();
 		this.realCost = 0;
 		this.predictedCost = 0;
-		this.roadCost = 0;
 		for (Node n : this.setup.network)
 			n.resetCurrentCost();
 	}
@@ -39,14 +41,6 @@ public class Algorithms {
 			Road tmpRoad = this.setup.findConnectorRoad(this.path.get(i - 1), this.path.get(i));
 			this.predictedCost += (tmpRoad.weight) * d.getTraffic(d.findRoadIndex(tmpRoad));
 		}
-	}
-
-	private double printWeightForEachRoad(Day d, int i) {
-		this.roadCost = 0;
-		Road tmpRoad = this.setup.findConnectorRoad(this.path.get(i - 1), this.path.get(i));
-		this.roadCost = (tmpRoad.weight) * d.getTraffic(d.findRoadIndex(tmpRoad));
-
-		return this.roadCost;
 	}
 
 	private void calculatePath(int[] parentNodes) {
@@ -166,7 +160,7 @@ public class Algorithms {
 
 	}
 
-	public double searchIDA(List<Node> mPath, Day dayIn, double fringeCost, Heuristic2 h) {
+	private double searchIDA(List<Node> mPath, Day dayIn, double fringeCost, Heuristic2 h) {
 		this.nodesVisited++;
 		Node dstNode = this.setup.findNodeByName(this.setup.destination);
 		Node currNode = mPath.get(mPath.size() - 1);
@@ -241,12 +235,49 @@ public class Algorithms {
 		return newPath;
 	}
 
-	public void printResults(Day d1) {
-		if (d1.isPrediction) {
-			calcPredictedCostFromPath(d1);
-		} else {
-			calcRealCostFromPath(d1);
+	private void printWeightForEachRoad(Day d) {
+		double roadCost;
+		for (int i = path.size() - 1; i > 0; i--) {
+			String name = this.setup.findConnectorRoad(this.path.get(i - 1), this.path.get(i)).roadName;
+			Road tmpRoad = this.setup.findConnectorRoad(this.path.get(i - 1), this.path.get(i));
+			roadCost = (tmpRoad.weight) * d.getTraffic(d.findRoadIndex(tmpRoad));
+			System.out.printf(name + "(" + roadCost + ")\t");
 		}
+	}
+
+//	public void printResults(Day d1) {
+//		if (d1.isPrediction) {
+//			calcPredictedCostFromPath(d1);
+//		} else {
+//			calcRealCostFromPath(d1);
+//		}
+//		System.out.println("------------" + currentAlgo + " Results: -------------");
+//		System.out.println("Execution Time: " + this.executionTime + " ns");
+//		System.out.println("Visited Nodes number: " + this.nodesVisited);
+//		System.out.println("Path: ");
+//
+//		for (int i = path.size() - 1; i >= 0; i--) {
+//			System.out.printf(this.path.get(i) + (i == 0 ? "\n" : " -> "));
+//		}
+//		if (d1.getIsPrediction()) {
+//			System.out.println("Prediction Cost for each road: ");
+//			printWeightForEachRoad(d1);
+//		} else {
+//			System.out.println("Actual Cost for each road: ");
+//			printWeightForEachRoad(d1);
+//		}
+//		allDaysCost += this.realCost;
+//		System.out.println("\nTotal Predicted Cost: " + this.predictedCost);
+//		System.out.println("Total Real Cost: " + this.realCost);
+//		System.out.println("--------------------------------------");
+//	}
+
+	private void printResultsNew(Day pred, Day act) {
+		if (!pred.isPrediction)
+			System.err.println("Algorithms::printResultsNew -- WRONG DAYS");
+
+		calcRealCostFromPath(act);
+
 		System.out.println("------------" + currentAlgo + " Results: -------------");
 		System.out.println("Execution Time: " + this.executionTime + " ns");
 		System.out.println("Visited Nodes number: " + this.nodesVisited);
@@ -255,22 +286,12 @@ public class Algorithms {
 		for (int i = path.size() - 1; i >= 0; i--) {
 			System.out.printf(this.path.get(i) + (i == 0 ? "\n" : " -> "));
 		}
-		if (d1.getIsPrediction()) {
-			System.out.println("Prediction Cost for each road: ");
-			for (int i = path.size() - 1; i > 0; i--) {
-				String name = this.setup.findConnectorRoad(this.path.get(i - 1), this.path.get(i)).roadName;
-				double roadCost = this.printWeightForEachRoad(d1, i);
-				System.out.printf(name + " cost: " + roadCost + "\t");
-			}
-		} else {
-			System.out.println("Actual Cost for each road: ");
-			for (int i = path.size() - 1; i > 0; i--) {
-				String name = this.setup.findConnectorRoad(this.path.get(i - 1), this.path.get(i)).roadName;
-				double roadCost = this.printWeightForEachRoad(d1, i);
-				System.out.printf(name + " cost: " + roadCost + "\t");
-			}
-		}
-		allDaysCost += this.realCost;
+		System.out.println("Actual Cost for each road: ");
+		printWeightForEachRoad(act);
+		if (this.currentAlgo.contains("IDA"))
+			allDaysCost_UCS += this.realCost;
+		else
+			allDaysCost_IDA += this.realCost;
 		System.out.println("\nTotal Predicted Cost: " + this.predictedCost);
 		System.out.println("Total Real Cost: " + this.realCost);
 		System.out.println("--------------------------------------");
@@ -280,10 +301,37 @@ public class Algorithms {
 		this.setup = setup;
 		predictedCost = 0;
 		realCost = 0;
-		totalCost = 0;
 		executionTime = 0;
 		nodesVisited = 0;
-		allDaysCost = 0;
+		allDaysCost_UCS = 0;
+		allDaysCost_IDA = 0;
 		this.path = new ArrayList<String>();
+	}
+
+	public void runAndPrint() {
+		double tmpPredCost;
+		for (int i = 0; i < this.setup.actualTraffic.size(); i++) {
+			System.out.println("Day " + i + 1);
+			runUCS(this.setup.getPredictionDay(i));
+			// due to previous designs this is a quick reformat. we keep here
+			// the predicted cost of the predicted path because each time we call
+			// run{ALG}() the member variables are reset.
+			calcPredictedCostFromPath(this.setup.getPredictionDay(i));
+			tmpPredCost = this.predictedCost;
+			runUCS(this.setup.getActualTrafficDay(i));
+			this.predictedCost = tmpPredCost;
+			printResultsNew(this.setup.getPredictionDay(i), this.setup.getActualTrafficDay(i));
+
+			runIDAStar(this.setup.getPredictionDay(i));
+			calcPredictedCostFromPath(this.setup.getPredictionDay(i));
+			tmpPredCost = this.predictedCost;
+			runIDAStar(this.setup.getActualTrafficDay(i));
+			this.predictedCost = tmpPredCost;
+			printResultsNew(this.setup.getPredictionDay(i), this.setup.getActualTrafficDay(i));
+		}
+		double costIDA = this.allDaysCost_IDA / this.setup.actualTraffic.size();
+		double costUCS = this.allDaysCost_UCS / this.setup.actualTraffic.size();
+		System.out.println("The total mean cost of UCS is: " + costUCS);
+		System.out.println("The total mean cost of IDA* is: " + costIDA);
 	}
 }

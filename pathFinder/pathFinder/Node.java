@@ -1,6 +1,7 @@
 package pathFinder;
 
-import java.util.*;
+import java.util.Comparator;
+import java.util.LinkedList;
 
 public class Node {
 	public String name;
