@@ -15,6 +15,7 @@ public class Algorithms {
 	private long executionTime;
 	private ArrayList<String> path;
 	private String currentAlgo;
+	private int goodPreds;
 
 	/////////////////////////////////////////// UTILS///////////////////////////////////////////
 	private void reset() {
@@ -246,7 +247,7 @@ public class Algorithms {
 		for (int i = 0; i < networkSize; i++)
 			parentNode[i] = -1;
 		PriorityQueue<Node> queue = new PriorityQueue<Node>(networkSize, srcNode.new SortbyFringe());
-		
+
 		queue.add(srcNode);
 		Heuristic2 h = new Heuristic2(this.setup, dayIn);
 		srcNode.currentCost = 0;
@@ -254,25 +255,23 @@ public class Algorithms {
 		boolean found = false;
 		while (!queue.isEmpty()) {
 			Node currentNode = queue.poll();
-			if(currentNode.name.equals(this.setup.destination)) {
+			if (currentNode.name.equals(this.setup.destination)) {
 				found = true;
 				break;
 			}
 
-			PriorityQueue<Road> curRoads = new PriorityQueue<Road>(
-					currentNode.roads.size(),
-					currentNode.roads.get(0).new SortbyWeight()
-				);
-			
-			for(Road r: currentNode.roads) curRoads.add(r);
-			
+			PriorityQueue<Road> curRoads = new PriorityQueue<Road>(currentNode.roads.size(),
+					currentNode.roads.get(0).new SortbyWeight());
+
+			for (Road r : currentNode.roads)
+				curRoads.add(r);
+
 			Node childNode;
 			Road cheaperRoad = curRoads.poll();
 			if (cheaperRoad.dstNode == currentNode)
 				childNode = cheaperRoad.srcNode;
 			else
 				childNode = cheaperRoad.dstNode;
-			
 
 			double cost = dayIn.calculateWeight(cheaperRoad);
 			double tentativeCost = currentNode.currentCost + cost;
@@ -323,6 +322,10 @@ public class Algorithms {
 			allDaysCost_UCS += this.realCost;
 		System.out.println("\n\tTotal Predicted Cost: " + this.predictedCost);
 		System.out.println("\tTotal Real Cost: " + this.realCost);
+		if (this.currentAlgo.contains("IDA"))
+			if (this.predictedCost < this.realCost + 5 && this.predictedCost > this.realCost - 5 ) {
+				goodPreds++;
+			}
 //		System.out.println("--------------------------------------");
 	}
 
@@ -334,6 +337,7 @@ public class Algorithms {
 		nodesVisited = 0;
 		allDaysCost_UCS = 0;
 		allDaysCost_IDA = 0;
+		goodPreds = 0;
 		this.path = new ArrayList<String>();
 	}
 
@@ -352,5 +356,6 @@ public class Algorithms {
 		double costUCS = this.allDaysCost_UCS / this.setup.actualTraffic.size();
 		System.out.println("\nThe total mean cost of UCS is: " + costUCS);
 		System.out.println("The total mean cost of IDA* is: " + costIDA);
+		System.out.println("IDA* Predictions within +-5 from actual: " + goodPreds);
 	}
 }

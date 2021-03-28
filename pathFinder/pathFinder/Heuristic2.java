@@ -2,6 +2,9 @@ package pathFinder;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PriorityQueue;
+
+import pathFinder.Road.SortbyWeight;
 
 class Heuristic2 {
 	List<String> path;

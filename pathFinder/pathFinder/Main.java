@@ -23,9 +23,7 @@ public class Main {
 			System.setOut(o); // System.out now outputs to the file out.txt
 			Algorithms alg = new Algorithms(inputData);
 			alg.runAndPrint();
-//			System.out.println("111");
-//			alg.runLRTAStar(inputData.getActualTrafficDay(0));
-//			System.out.println("222");
+
 //			for(int i = 0; i < inputData.actualTraffic.size(); i++) {
 //				alg.runLRTAStar(inputData.getPredictionDay(i));
 //				alg.printResultsNew(inputData.getPredictionDay(i), inputData.getActualTrafficDay(i));
