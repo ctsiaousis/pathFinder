@@ -8,7 +8,7 @@ public class Day {
 	public List<Double> traffic;
 	public boolean isPrediction;
 	public double normalTrafficVal;
-	private double p1=0.6, p2=0.2, p3=0.2;
+	private double p1=0.4, p2=0.3, p3=0.3;
 	//p1 makes heavy -> normal
 	//p2 makes normal -> low
 	//p3 makes low -> normal
@@ -23,6 +23,9 @@ public class Day {
 
 	public void setIsPrediction(boolean b) {
 		this.isPrediction = b;
+		if(b) {
+			recalcTraffic();
+		}
 	}
 
 	public boolean getIsPrediction() {
@@ -43,35 +46,40 @@ public class Day {
 		double daysTraffic = traffic.get(findRoadIndex(r));
 		return r.weight * daysTraffic;
 	}
-
-	private String weightWithOdds(String tr) {
+	
+	private double weightWithOdds(double tr) {
 		if (this.isPrediction) {
 			double posib = Math.random();
-			if (posib <= this.p3) {
-				if (tr.contains("low"))
-					return "normal";
-			} else if (posib > 1-this.p2) {
-				if (tr.contains("normal"))
-					return "low";
-			} else if (posib <= this.p1+this.p2){
-				if (tr.contains("heavy"))
-					return "normal";
+			if (tr == normalTrafficVal * 0.9) {
+				if (posib <= this.p3)
+					return normalTrafficVal;
+			}else if(tr == normalTrafficVal) {
+				if (posib > 1-this.p2)
+					return normalTrafficVal * 0.9;
+			}else {
+				if (posib <= 1-this.p2 && posib > this.p3)
+					return normalTrafficVal;
 			}
 		}
 		return tr;
 	}
+	
+	private void recalcTraffic() {
+		for(int i = 0; i < traffic.size(); i++) {
+			double newTraf = weightWithOdds(traffic.get(i));
+			traffic.set(i, newTraf);
+		}
+	}
 
 	public void appendTouple(String name, String tr) {
 		roadNames.add(name);
-		String newTraffic = weightWithOdds(tr);
-		if (newTraffic.contains("low")) {
+		if (tr.contains("low")) {
 			traffic.add(normalTrafficVal * 0.9);
-		} else if (newTraffic.contains("heavy")) {
+		} else if (tr.contains("heavy")) {
 			traffic.add(normalTrafficVal * 1.25);
 		} else {
 			traffic.add(normalTrafficVal);
 		}
-		normalTrafficVal = 1;// reset for next tuple
 	}
 
 	public String getName(int i) {
